@@ -6,7 +6,12 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
 	return (
 		<div>
-			<div className="bg-black py-20">
+			<div
+				className="py-20"
+				style={{
+					backgroundColor: "rgb(35, 33, 39)",
+				}}
+			>
 				<div className="flex sm:flex-col md:flex-row md:space-x-20 lg:space-x-60 md:pl-10 lg:pl-40">
 					<div className="sm:text-center text-white text-4xl sans-serif font-bold">
 						Shortly
