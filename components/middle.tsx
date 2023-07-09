@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Middle = () => {
     return (
         <div>
-            {/* Fouth */}
+            
      <div className="sm:p-10 bg-gray-200 md:pb-60 lg:pb-60">
        <div className="sm:pt-20 md:pt-40">
           <h1 className="text-center  sm:text-2xl md:text-4xl sans-serif font-bold">Advanced Statistics</h1>
