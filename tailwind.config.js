@@ -1,32 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    screens: {
-      'sm': '200px',
-      // => @media (min-width: 640px) { ... }
+	content: [
+		"./app/**/*.{js,ts,jsx,tsx,mdx}",
+		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
+		"./components/**/*.{js,ts,jsx,tsx,mdx}",
 
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
+		// Or if using `src` directory:
+		"./src/**/*.{js,ts,jsx,tsx,mdx}",
+	],
+	theme: {
+		screens: {
+			sm: "200px",
+			// => @media (min-width: 640px) { ... }
 
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
+			md: "768px",
+			// => @media (min-width: 768px) { ... }
 
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
+			lg: "1024px",
+			// => @media (min-width: 1024px) { ... }
 
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
-    },
+			xl: "1280px",
+			// => @media (min-width: 1280px) { ... }
 
-    extend: {},
-  },
-  plugins: [],
-}
+			"2xl": "1536px",
+			// => @media (min-width: 1536px) { ... }
+		},
+
+		extend: {},
+	},
+	plugins: [],
+};
