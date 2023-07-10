@@ -13,7 +13,7 @@ const Buttom = () => {
 			>
 				<div className="pb-8">
 					<h1 className="text-center text-white  sm:text-2xl md:text-4xl sans-serif font-bold">
-						Boot your links today.
+						Boost your links today.
 					</h1>
 					<div className="flex justify-center sm:mt-4 md:mt-10">
 						<Link
