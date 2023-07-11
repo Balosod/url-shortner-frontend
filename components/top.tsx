@@ -11,25 +11,27 @@ const Top = () => {
 	const [right, setRight] = React.useState(["1"]);
 	const [position, setPosition] = React.useState(0);
 
-	const  callApi = async () => {
+	const callApi = async () => {
 		if (link) {
-			console.log(link)
+			console.log(link);
 			const requestOptions = {
 				method: "POST",
-				headers: {"Content-Type": "application/json"},
+				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
-					link
+					link,
 				}),
-			}
-            const response = await fetch('https://ur-tuki.onrender.com/api/post-link',requestOptions)
-            const data = await response.json()
-			
-			const shortLink = data['message']['shorted_link']
-			const shortUrl = `https://ur-tuki.onrender.com/api/get-link/${shortLink}`
+			};
+			const response = await fetch(
+				"https://ur-tuki.onrender.com/api/post-link",
+				requestOptions,
+			);
+			const data = await response.json();
+
+			const shortLink = data["message"]["shorted_link"];
+			const shortUrl = `https://ur-tuki.onrender.com/api/get-link/${shortLink}`;
 			setLinkError("");
 			const newLeft = [...left, link];
 			setLeft(newLeft);
-			
 
 			const newRight = [...right, shortUrl];
 			setRight(newRight);
@@ -43,7 +45,7 @@ const Top = () => {
 		}
 	};
 
-	const changeColorAndText = (event:MouseEvent, textToCopy:String) => {
+	const changeColorAndText = (event: MouseEvent, textToCopy: String) => {
 		const target = event.currentTarget as HTMLButtonElement;
 		target.classList.remove("bg-teal-300");
 		target.classList.add("bg-violet-950");
@@ -154,9 +156,6 @@ const Top = () => {
 							<div className="truncate text-left text-justify md:w-2/3 bg-white sm:p-4 md:p-2 ">
 								{/* left textBuild your brand recognitions and get detailed */}
 								{left[number + 1]}
-								
-								
-								
 							</div>
 							<div className=" md:hidden h-1 w-full bg-gray-100"></div>
 							<div className=" md:truncate text-teal-600 md:w-1/4 bg-white sm:p-4 md:p-2">
