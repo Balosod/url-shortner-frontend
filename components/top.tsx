@@ -146,7 +146,7 @@ const Top = () => {
 			</div>
 			{/* position */}
 
-			<div className="sm:p-1 bg-gray-200 md:pb-60  lg:pb-60">
+			<div className="  sm:p-1 bg-gray-200 md:pb-60  lg:pb-60">
 				<div className="sm:mt-24 md:mt-24">
 					{numbers.map((number, index) => (
 						<div
@@ -177,7 +177,7 @@ const Top = () => {
 					))}
 				</div>
 
-				<div className="sm:pt-20 md:pt-40">
+				<div className="sm:pt-20 sm:px-4 md:px-0 md:pt-40">
 					<h1 className="text-center  sm:text-2xl md:text-4xl sans-serif font-bold">
 						Advanced Statistics
 					</h1>
@@ -189,11 +189,11 @@ const Top = () => {
 					</p>
 				</div>
 
-				<div className=" md:pl-4 lg:pl-40 pt-20">
+				<div className=" sm:p-4 sm:mt-20  md:pl-4 lg:pl-40 pt-20">
 					<div className=" sm:hidden md:block md:relative md:top-40 lg:top-44 bg-teal-300  md:h-2 md:mr-40 lg:mr-60"></div>
-					<div className="  left-0 right-0 m-auto md:hidden absolute  bg-teal-300  h-3/4 w-4 mt-40"></div>
+					<div className="  left-0 right-0 m-auto md:hidden absolute  bg-teal-300  h-2/3 w-4 mt-40"></div>
 
-					<div className=" flex sm:flex-col md:flex-row md:space-x-8 lg:space-x-8 sm:relative md:relative ">
+					<div className="  flex sm:flex-col md:flex-row md:space-x-8 lg:space-x-8 sm:relative md:relative ">
 						{/* 1 */}
 						<div className="bg-white rounded-md sm:w-auto md:w-80 lg:w-80">
 							<div
@@ -225,7 +225,7 @@ const Top = () => {
 						{/* 2 */}
 						<div className="bg-white sm:mt-20 md:mt-10 md:-mb-10 lg:mt-10 lg:-mb-10 rounded-md sm:w-auto md:w-80 lg:w-80">
 							<div
-								className="sm:w-24 sm:h-24 md:w-20 md:h-20 lg:w-24 -mt-10 sm:mx-auto md:ml-10 rounded-full flex items-center justify-center"
+								className="sm:w-24 sm:h-24 md:w-20 md:h-20 lg:w-24 lg:h-24 -mt-10 sm:mx-auto md:ml-10 rounded-full flex items-center justify-center"
 								style={{
 									backgroundColor: "rgb(59, 48, 84)",
 								}}
@@ -251,11 +251,11 @@ const Top = () => {
 						</div>
 
 						{/* 3 */}
-						<div className="bg-white sm:mt-20 md:mt-20 md:-mb-20 lg:mt-20 lg:-mb-20 rounded-md sm:w-auto md:w-80 lg:w-80">
+						<div className="bg-white sm:mb-10 sm:mt-20 md:mt-20 md:-mb-20 lg:mt-20 lg:-mb-20 rounded-md sm:w-auto md:w-80 lg:w-80">
 							<div
-								className="sm:w-24 sm:h-24 md:w-20 md:h-20 lg:w-24 -mt-10 sm:mx-auto md:ml-10 rounded-full flex items-center justify-center"
+								className="sm:w-24 sm:h-24 md:w-20 md:h-20 lg:w-24 lg:h-24 -mt-10 sm:mx-auto md:ml-10 rounded-full flex items-center justify-center"
 								style={{
-									backgroundColor: "rgb(59, 48, 84)",
+									backgroundColor: "rgb(59, 48, 84)"
 								}}
 							>
 								<Image
