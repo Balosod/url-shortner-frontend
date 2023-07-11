@@ -136,12 +136,12 @@ const Top = () => {
 						)}
 					</div>
 
-					<div
+					<button
 						className=" md:w-40 sm:mt-2 md:mt-0 md:ml-8 lg:ml-8 rounded-md text-white  bg-teal-300 sm:py-2 sm:text-center  md:text-center md:px-4 md:py-4 lg:px-8  sans-serif font-bold"
 						onClick={callApi}
 					>
 						Shorten it!
-					</div>
+					</button>
 				</div>
 			</div>
 			{/* position */}
