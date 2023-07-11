@@ -8,7 +8,6 @@ const Navbar = () => {
 	let [display, changeDisplay] = useState(false);
 	return (
 		<div>
-			{/* <Navbar/> */}
 			{/* Desktop */}
 			<div className="flex sm:hidden md:flex justify-between py-10 md:ml-20 lg:ml-40">
 				<div className="flex flex-row space-x-6  ">
