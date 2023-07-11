@@ -45,7 +45,7 @@ const Top = () => {
 		}
 	};
 
-	const changeColorAndText = (event: MouseEvent, textToCopy: String) => {
+	const changeColorAndText = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, textToCopy: String) => {
 		const target = event.currentTarget as HTMLButtonElement;
 		target.classList.remove("bg-teal-300");
 		target.classList.add("bg-violet-950");

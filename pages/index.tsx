@@ -12,7 +12,6 @@ export default function Home() {
 			<Navbar />
 			{/* Second section */}
 			<Top />
-
 			{/* fifth */}
 			<Buttom />
 			{/* sixth */}
