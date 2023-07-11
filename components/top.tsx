@@ -6,19 +6,32 @@ import Image from "next/image";
 const Top = () => {
 	const [link, setLink] = React.useState("");
 	const [linkError, setLinkError] = useState("");
-	const [numbers, setNumbers] = React.useState([]);
+	const [numbers, setNumbers] = React.useState<number[]>([]);
 	const [left, setLeft] = React.useState(["1"]);
 	const [right, setRight] = React.useState(["1"]);
 	const [position, setPosition] = React.useState(0);
 
-	const callApi = () => {
+	const  callApi = async () => {
 		if (link) {
+			console.log(link)
+			const requestOptions = {
+				method: "POST",
+				headers: {"Content-Type": "application/json"},
+				body: JSON.stringify({
+					link
+				}),
+			}
+            const response = await fetch('https://ur-tuki.onrender.com/api/post-link',requestOptions)
+            const data = await response.json()
+			
+			const shortLink = data['message']['shorted_link']
+			const shortUrl = `https://ur-tuki.onrender.com/api/get-link/${shortLink}`
 			setLinkError("");
 			const newLeft = [...left, link];
 			setLeft(newLeft);
-			console.log(link);
+			
 
-			const newRight = [...right, `${Math.random()}`];
+			const newRight = [...right, shortUrl];
 			setRight(newRight);
 
 			setPosition(position + 1);
@@ -30,13 +43,13 @@ const Top = () => {
 		}
 	};
 
-	const changeColorAndText = (event, textToCopy) => {
-		const target = event.target;
+	const changeColorAndText = (event:MouseEvent, textToCopy:String) => {
+		const target = event.currentTarget as HTMLButtonElement;
 		target.classList.remove("bg-teal-300");
 		target.classList.add("bg-violet-950");
 		target.innerHTML = "Copied!";
 		navigator.clipboard
-			.writeText(textToCopy)
+			.writeText(`${textToCopy}`)
 			.then(() => {
 				console.log("Text copied to clipboard:", textToCopy);
 			})
@@ -138,12 +151,15 @@ const Top = () => {
 							key={number}
 							className="flex sm:flex-col md:flex-row  sm:m-4 md:space-x-4 md:ml-10 md:mr-10 lg:ml-40 lg:mr-40 mb-2 rounded-md  bg-white sm:p-0 md:p-4"
 						>
-							<div className="w-2/3 bg-white sm:p-4 md:p-2">
+							<div className="truncate text-left text-justify md:w-2/3 bg-white sm:p-4 md:p-2 ">
 								{/* left textBuild your brand recognitions and get detailed */}
 								{left[number + 1]}
+								
+								
+								
 							</div>
 							<div className=" md:hidden h-1 w-full bg-gray-100"></div>
-							<div className="w-1/3 bg-white sm:p-4 md:p-2">
+							<div className=" md:truncate text-teal-600 md:w-1/4 bg-white sm:p-4 md:p-2">
 								{/* right text Build your brand */}
 								{right[number + 1]}
 							</div>
