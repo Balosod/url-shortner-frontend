@@ -12,8 +12,8 @@ const Footer = () => {
 					backgroundColor: "rgb(35, 33, 39)",
 				}}
 			>
-				<div className="flex sm:flex-col md:flex-row md:space-x-20 lg:space-x-60 md:pl-10 lg:pl-40">
-					<div className="sm:text-center text-white text-4xl sans-serif font-bold">
+				<div className="flex sm:flex-col md:flex-row md:space-x-20 lg:space-x-40 md:pl-10 lg:pl-20">
+					<div className="sm:text-center  text-white text-4xl sans-serif font-bold">
 						Shortly
 					</div>
 					<div className="flex sm:mt-10 md:mt-0 sm:flex-col md:flex-row md:space-x-6 lg:space-x-20">
