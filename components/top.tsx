@@ -45,7 +45,10 @@ const Top = () => {
 		}
 	};
 
-	const changeColorAndText = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, textToCopy: String) => {
+	const changeColorAndText = (
+		event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+		textToCopy: String,
+	) => {
 		const target = event.currentTarget as HTMLButtonElement;
 		target.classList.remove("bg-teal-300");
 		target.classList.add("bg-violet-950");
@@ -255,7 +258,7 @@ const Top = () => {
 							<div
 								className="sm:w-24 sm:h-24 md:w-20 md:h-20 lg:w-24 lg:h-24 -mt-10 sm:mx-auto md:ml-10 rounded-full flex items-center justify-center"
 								style={{
-									backgroundColor: "rgb(59, 48, 84)"
+									backgroundColor: "rgb(59, 48, 84)",
 								}}
 							>
 								<Image

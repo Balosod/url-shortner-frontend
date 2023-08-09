@@ -93,15 +93,17 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className="text-center"
-			style={{
-				backgroundColor: "rgb(35, 33, 39)",
-			}}>
-      <small className="text-white text-xs">
-        {" "}
-        ©Copyright 2023, All Rights Reserved By Balogun Sodiq.
-      </small>
-    </div>
+			<div
+				className="text-center"
+				style={{
+					backgroundColor: "rgb(35, 33, 39)",
+				}}
+			>
+				<small className="text-white text-xs">
+					{" "}
+					©Copyright 2023, All Rights Reserved By Balogun Sodiq.
+				</small>
+			</div>
 		</div>
 	);
 };
